@@ -1,5 +1,8 @@
 # Work Day Scheduler
 
+## Description
+
+
 ## Acceptance Criteria
 
 GIVEN I am using a daily planner to create a schedule<br>
@@ -19,3 +22,10 @@ THEN the saved events persist<br>
 ## Mockup
 
 ![mockup of acceptance criteria](./Assets/05-third-party-apis-homework-demo.gif)
+
+## Credit
+
+Starter code found here: https://github.com/coding-boot-camp/crispy-octo-meme
+
+## Live Link
+
