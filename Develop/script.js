@@ -23,11 +23,21 @@ for (i=0;i<hoursArray.length;i++) {
   } else {
     hoursArray[i].className = 'row time-block future';
   }
+
+  var localKey = hoursArray[i].id;
+  var localKeyExists = (localStorage.getItem(localKey) !== null);
+  if (localKeyExists) {
+    var localValue = localStorage.getItem(localKey);
+    hoursArray[i].querySelector('.description').value = localValue;
+  }
 }
 
 buttons.forEach(btn => {
   btn.addEventListener("click", function() {
-    console.log(this.parentElement.id);
+    var parentId = this.parentElement.id;
+    var parentEl = document.getElementById(parentId);
+    var textBoxValue = parentEl.querySelector(".description").value;
+    localStorage.setItem(parentId, textBoxValue);
   });
 });
 
