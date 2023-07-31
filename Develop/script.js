@@ -11,11 +11,13 @@ var buttons = document.querySelectorAll('.btn');
 var hoursArray = [hour_9, hour_10, hour_11, hour_12, hour_1, hour_2, hour_3, hour_4, hour_5];
 var today = dayjs();
 var currentHour = today.hour();
+// The first hour (index 0) in hoursArray is hour_9. So the index is the hour - 9 (9-9=0)
 var currentHourIndex = currentHour - 9;
 
 $('#currentDay').text(today.format('dddd, MMMM D'))
 
 for (i=0;i<hoursArray.length;i++) {
+  // Determine if each time block is in the past, present, or future, and change the classes accordingly
   if (i < currentHourIndex) {
     hoursArray[i].className = 'row time-block past';
   } else if ( i == currentHourIndex) {
@@ -24,6 +26,7 @@ for (i=0;i<hoursArray.length;i++) {
     hoursArray[i].className = 'row time-block future';
   }
 
+  // Display saved descriptions into text boxes
   var localKey = hoursArray[i].id;
   var localKeyExists = (localStorage.getItem(localKey) !== null);
   if (localKeyExists) {
@@ -32,6 +35,7 @@ for (i=0;i<hoursArray.length;i++) {
   }
 }
 
+// Save user input to local storage, the Key being the element ID of the block the user ID clicked the save button for
 buttons.forEach(btn => {
   btn.addEventListener("click", function() {
     var parentId = this.parentElement.id;
@@ -40,17 +44,3 @@ buttons.forEach(btn => {
     localStorage.setItem(parentId, textBoxValue);
   });
 });
-
-
-
-// TODO: Add a listener for click events on the save button. This code should
-// use the id in the containing time-block as a key to save the user input in
-// local storage. HINT: What does `this` reference in the click listener
-// function? How can DOM traversal be used to get the "hour-x" id of the
-// time-block containing the button that was clicked? How might the id be
-// useful when saving the description in local storage?
-//
-//
-// TODO: Add code to get any user input that was saved in localStorage and set
-// the values of the corresponding textarea elements. HINT: How can the id
-// attribute of each time-block be used to do this?
