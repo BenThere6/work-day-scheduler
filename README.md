@@ -28,6 +28,8 @@ THEN the saved events persist<br>
 
 Starter code found here: https://github.com/coding-boot-camp/crispy-octo-meme
 
+All of the code in script.js is original.
+
 ## Live Link
 
 https://benthere6.github.io/work-day-scheduler/
