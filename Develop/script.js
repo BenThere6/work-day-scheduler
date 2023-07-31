@@ -26,8 +26,8 @@ for (i=0;i<hoursArray.length;i++) {
 }
 
 buttons.forEach(btn => {
-  btn.addEventListener("click", function(e) {
-    console.log(e.target.parentElement.id);
+  btn.addEventListener("click", function() {
+    console.log(this.parentElement.id);
   });
 });
 
