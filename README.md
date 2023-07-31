@@ -2,6 +2,7 @@
 
 ## Description
 
+Enter events for your work day using this Work Day Scheduler. When events are saved, they will reappear when you refresh the page. Current hour is displayed in red, past hours in gray, and future hours in green.
 
 ## Acceptance Criteria
 
@@ -29,3 +30,4 @@ Starter code found here: https://github.com/coding-boot-camp/crispy-octo-meme
 
 ## Live Link
 
+https://benthere6.github.io/work-day-scheduler/
