@@ -11,7 +11,7 @@ var buttons = document.querySelectorAll('.btn');
 var hoursArray = [hour_9, hour_10, hour_11, hour_12, hour_1, hour_2, hour_3, hour_4, hour_5];
 var today = dayjs();
 var currentHour = today.hour();
-// The first hour (index 0) in hoursArray is hour_9. So the index is the hour - 9 (9-9=0)
+// The first hour in hoursArray (index 0) is hour_9. So the index is the hour - 9 (9-9=0)
 var currentHourIndex = currentHour - 9;
 
 $('#currentDay').text(today.format('dddd, MMMM D'))
